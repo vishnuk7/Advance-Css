@@ -72,3 +72,19 @@ Second Step of CSS parsing
 >💡 Percentages are measured relative to their parent's width, if used to specify lenghts.
 >💡 em are meaured relative to their **parent** font-size, if used to specify font-size
 >💡 em are meaured relative to their **current** font-size, if used to specify lenghts
+>💡 rem are always measured relative to the `document's root` font-size
+
+CSS Inheritance
+
+>Every CSS property must have a value
+
+`if is there a cascade value?` then `Specified value = cascade value`;
+`eles there is no cascade value` them `is the property inherited?(specific to each property)` then `specified value = computed value of parent element ` 
+else `specified value = initial value (specific to each property)`
+
+>💡 Inheritance passes the value for some specific properties from parents to children - **more maintainable code**
+>💡 Properties related to text are inherited: font-family,font-size,color,etc
+>💡 The computed value of a property is what gets inherited, not the declared value.
+>💡 Inheritance of a property only works if no one declares a value fot that property
+>💡 The `inherit` keyword forces inheritance on a certain propery
+>💡 The `initial` keyword resets a property to its initial value
