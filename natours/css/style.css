@@ -194,11 +194,26 @@ body {
     transform: translateY(-1.5rem) scale(1.03); }
 
 .card {
-  background-color: orangered;
-  height: 50rem;
-  transition: all .8s; }
-  .card:hover {
+  perspective: 150rem;
+  position: relative; }
+  .card__side {
+    color: #fff;
+    font-size: 1.6rem;
+    height: 50rem;
+    transition: all .8s;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; }
+    .card__side--front {
+      background-color: orangered; }
+    .card__side--back {
+      background-color: palevioletred;
+      transform: rotateY(180deg); }
+  .card:hover .card__side--front {
     transform: rotateY(180deg); }
+  .card:hover .card__side--back {
+    transform: rotateY(0); }
 
 .header {
   height: 90vh;
