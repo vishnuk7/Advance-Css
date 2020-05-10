@@ -51,3 +51,24 @@ How the importance work according precdence
 >💡 The universal selector * has no specificity value(0,0,0,0) `value(inline style,ID,classes,elements)`
 >💡 Rely more on **specificity** that on the **order**   of selectors.
 >💡 But, rely on order when using 3rd-party stylesheets - always put your author stylesheet last *so here order is important* 
+
+Second Step of CSS parsing
+ 
+> How  unit are converted from relative to absolute (px)
+`%fonts`% is not an unit if you use `%` then the final output is on `px`it is computed `x% * parent's computed font-size` 
+`% lenght` if use % in padding then it computed with parent's width example `x% * parent's width`
+
+**font-based units**
+1. em(font) => `3em = x * parent computed font-size`
+2. em(lenght) => `x * current element computed font-size`
+3. rem it work for both font and lenght => `x * root computed font-size`
+4. vh => `x * 1% of viewport height`
+5. vw => `x * 1% of viewport width`
+
+>💡 Each property has an initial value, used if nothing is declared (and if there is no inheritance )
+>💡 Browsers specify a **root font-size** for each page(usually 16px)
+>💡 Percentages and relative values are always converted into pixels
+>💡 Percentages are measured relative to their parent's **font-size**, if used to specify `font-size`
+>💡 Percentages are measured relative to their parent's width, if used to specify lenghts.
+>💡 em are meaured relative to their **parent** font-size, if used to specify font-size
+>💡 em are meaured relative to their **current** font-size, if used to specify lenghts
