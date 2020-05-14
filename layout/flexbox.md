@@ -13,8 +13,10 @@ Above line of code define the flex container
 ```
 
 >💡 if you define `wrap` proprty then items are not going to overflow
+>💡 `nowrap` means there no wrap then is only one line 
 
 `flex-flow` is a shorthand for the `flex-direction` and `flex-wrap` 
+
 
 `justify-content:space-between`
 
