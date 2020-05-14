@@ -83,7 +83,8 @@ attribute selector
 ```css
   [class*="col-"]{
     --width:4;
-    --initbasis:calc(var(--width) / var(--columns) * 100)
-    flex-basic: --initbasis;
+    --initbasis:calc(var(--width) / var(--columns) * 100);
+    --gap:calc((var(--column) - var(--width)) * 1% );
+    flex-basis: calc(var(--initbasis) - var(--gap));
   }
 ```
